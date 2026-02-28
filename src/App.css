@@ -1,0 +1,15 @@
+body {
+  height: 100vh;
+}
+
+.App {
+  padding: 2em;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1em;
+}
+
+.dark {
+  background-color: rgb(29, 29, 29);
+  color: rgb(199, 199, 199);
+}
