@@ -1,31 +1,32 @@
 
 import { useEffect, useState } from "react"
-import { useTheme } from "../../components/theme/ThemeContext";
 
 export default function UseEffectExample() {
 
+    
     const [ count1, setCount1 ] = useState(0);
     const [ count2, setCount2 ] = useState(0);
-
-    const [ todoId ] = useState();
-    const [ count3, setCount3 ] = useState(`https://jsonplaceholder.typicode.com/todos/${todoId ?? ""}`);
-
+    const [ count3, setCount3 ] = useState(0);
     
+    // this will logged every second.
+    console.log(`UseEffectExample is being rendered now. ${count1}, ${count2}, ${count3}`);
+
     setTimeout(() => {
         let i = count1 + 1
         setCount1(i)
         
-    }, 1000)
-
-    useEffect(() => {
-        setTimeout(() => {
-            setCount2(count2 + 1)
-        }, 1000)
-    }, [count2]);
+    }, 1000);
 
     useEffect(() => {
         setCount3(count1)
-    }, [count1])
+    }, [count1]);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setCount2(count2 + 1);
+        }, 1000);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <>

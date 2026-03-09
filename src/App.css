@@ -5,11 +5,16 @@ body {
 .App {
   padding: 2em;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 1em;
+  /* display: grid;
+  align-items: center;
+  grid-template-rows: 2em 3em 35em; */
 }
 
 .dark {
   background-color: rgb(29, 29, 29);
   color: rgb(199, 199, 199);
+}
+
+.form-container {
+  margin-top: 1em;
 }
