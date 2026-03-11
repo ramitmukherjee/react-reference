@@ -9,7 +9,7 @@ export default function UseEffectExample() {
     const [ count3, setCount3 ] = useState(0);
     
     // this will logged every second.
-    console.log(`UseEffectExample is being rendered now. ${count1}, ${count2}, ${count3}`);
+    // console.log(`UseEffectExample is being rendered now. ${count1}, ${count2}, ${count3}`);
 
     setTimeout(() => {
         let i = count1 + 1

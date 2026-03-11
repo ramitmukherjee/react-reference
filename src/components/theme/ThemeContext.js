@@ -11,7 +11,6 @@ export const ThemeProvider = function({children}) {
 
     const toggleTheme = () => {
         theme === "light" ? setTheme("dark") : setTheme("light");
-        console.log("togglingTheme to: " + theme);
     }
 
     return (

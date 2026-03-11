@@ -1,8 +1,9 @@
 import './App.css';
-import UseEffectExample from './hooks/useEffect/UseEffectExample';
+import UseEffectExample from './hooks/UseEffectExample';
 import { ThemeProvider, useTheme } from './components/theme/ThemeContext';
 import ThemeSwitch from './components/theme/ThemeSwitch';
 import Greet from './components/basics/Greet';
+import Todo from './hooks/useState/Todo';
 
 function App() {
   
@@ -15,7 +16,10 @@ function App() {
           <ThemeSwitch />
         </div>
         <div>
-          <Greet />
+          {/* <Greet /> */}
+        </div>
+        <div>
+          <Todo />
         </div>
         <div>
           {/* Understanding useEffect */}

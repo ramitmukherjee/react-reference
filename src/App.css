@@ -17,4 +17,5 @@ body {
 
 .form-container {
   margin-top: 1em;
+  display: flex;
 }

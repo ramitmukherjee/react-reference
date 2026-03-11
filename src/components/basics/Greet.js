@@ -20,7 +20,7 @@ const Greet = () => {
 
     return (
     <div className="form-container">
-        <form>
+        <form onSubmit={(e) => e.preventDefault()}>
             <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="What is your name?" />
             {name ? <p>
                 Is your name {name} ?
