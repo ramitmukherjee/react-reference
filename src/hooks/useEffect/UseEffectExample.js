@@ -8,23 +8,27 @@ export default function UseEffectExample() {
     const [ count2, setCount2 ] = useState(0);
     const [ count3, setCount3 ] = useState(0);
     
-    // this will logged every second.
+    // this will logged every second, as this component is re-rendered every second
     // console.log(`UseEffectExample is being rendered now. ${count1}, ${count2}, ${count3}`);
 
+    // setting up a side effect outside of use effect (not recommended!)
     setTimeout(() => {
         let i = count1 + 1
-        setCount1(i)
+        setCount1(i);
         
     }, 1000);
 
     useEffect(() => {
-        setCount3(count1)
+        setCount3(count1);
+        // this effect will run every time count1 is updated
     }, [count1]);
 
     useEffect(() => {
         setTimeout(() => {
             setCount2(count2 + 1);
         }, 1000);
+        
+        // empty array dependency, effect will only run once
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
