@@ -15,12 +15,11 @@ export default function UseEffectExample() {
     setTimeout(() => {
         let i = count1 + 1
         setCount1(i);
-        
     }, 1000);
 
     useEffect(() => {
         setCount3(count1);
-        // this effect will run every time count1 is updated
+        // this effect will run every time count1 is updated (which is every second)
     }, [count1]);
 
     useEffect(() => {

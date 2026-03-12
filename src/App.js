@@ -1,9 +1,10 @@
 import './App.css';
-import UseEffectExample from './hooks/UseEffectExample';
+import UseEffectExample from './hooks/useEffect/UseEffectExample';
 import { ThemeProvider, useTheme } from './components/theme/ThemeContext';
 import ThemeSwitch from './components/theme/ThemeSwitch';
 import Greet from './components/basics/Greet';
 import Todo from './hooks/useState/Todo';
+import CompositionExample from './components/composition/radiogroup/CompositionExample';
 
 function App() {
   
@@ -24,6 +25,9 @@ function App() {
         <div>
           {/* Understanding useEffect */}
           <UseEffectExample />
+        </div>
+        <div>
+          <CompositionExample />
         </div>
       </div>
   );
