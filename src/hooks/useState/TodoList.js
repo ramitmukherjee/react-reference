@@ -9,7 +9,7 @@ const TodoList = ({todoList, handleCompleteTask}) => {
     return (
         <ul>
             {(
-                todoList.map(todo => {
+                todoList.length > 0 ? todoList.map(todo => {
                     return (
                         <Fragment key={todo.id}>
                             <div>
@@ -27,7 +27,7 @@ const TodoList = ({todoList, handleCompleteTask}) => {
                             </div>
                         </Fragment>
                     )
-                })
+                }) : "No more tasks left."
             )}
         </ul>
     );

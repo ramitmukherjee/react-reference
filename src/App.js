@@ -26,9 +26,6 @@ function App() {
           {/* Understanding useEffect */}
           <UseEffectExample />
         </div>
-        <div>
-          <CompositionExample />
-        </div>
       </div>
   );
 }
