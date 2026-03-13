@@ -1,10 +1,6 @@
-body {
-  height: 100vh;
-}
 
 .App {
   padding: 2em;
-  height: 100vh;
   /* display: grid;
   align-items: center;
   grid-template-rows: 2em 3em 35em; */

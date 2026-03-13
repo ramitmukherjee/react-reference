@@ -6,6 +6,7 @@ import Greet from './components/basics/Greet';
 import Todo from './hooks/useState/Todo';
 import YellowPanelWithFetch from './components/higher-order-components/YellowPanelWithFetch';
 import RedPanelWithFetchAndScroller from './components/higher-order-components/RedPanelWithFetchAndScroller';
+import GreenPanel from './components/render-props/GreenPanel';
 
 function App() {
   
@@ -17,16 +18,20 @@ function App() {
           {/* checkbox for switching theme for the whole app*/}
           <ThemeSwitch />
         </div>
+        
         <div>
           {/* <Greet /> */}
         </div>
+        
         <div>
           <Todo />
         </div>
+        
         <div>
           {/* Understanding useEffect */}
           <UseEffectExample />
         </div>
+        
         <div>
           <h1>Higher Order Components</h1>
           <YellowPanelWithFetch />
@@ -35,13 +40,22 @@ function App() {
             <li>The YellowPanel component was wrapped using WithFetch to get YellowPanelWithFetch component</li>
             <li>The WithFetch component has the common cross cutting concern of fetching data using the URL provided</li>
           </ul>
-          
+
           <RedPanelWithFetchAndScroller />
           <ul>
             <li>This is an example of a component which has been wrapped with higher order components twice</li>
             <li>First it was wrapped with WithFetch to get RedPanelWithFetch HOC</li>
             <li>Then the RedPanelWithFetch was again wrapped with WithScroller to get RedPanelWithFetchAndScroller HOC</li>
-            <li>Then the WithScroller HOC adds a coordinates prop to the wrapped component to display ClientX and ClientY</li>
+            <li>The WithScroller HOC adds a coordinates prop to the wrapped component to display ClientX and ClientY</li>
+          </ul>
+        </div>
+
+        <div>
+          <h1>Render Props</h1>
+          <GreenPanel />
+          <ul>
+            <li>This is an example of render props</li>
+            <li>The fetching of data is done by FetchRenderProp component</li>
           </ul>
         </div>
       </div>

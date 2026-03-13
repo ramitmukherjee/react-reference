@@ -17,7 +17,7 @@ const WithScroller = (WrappedComponent) => {
             return () => window.removeEventListener("mousemove", mouseMoveHandler);
         });
         return (
-            <WrappedComponent coordinates={{x: clientX, y: clientY}} />
+            <WrappedComponent coordinates={{x: clientX, y: clientY}} {...props} />
         );
     };
 
