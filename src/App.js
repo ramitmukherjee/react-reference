@@ -4,7 +4,8 @@ import { ThemeProvider, useTheme } from './components/theme/ThemeContext';
 import ThemeSwitch from './components/theme/ThemeSwitch';
 import Greet from './components/basics/Greet';
 import Todo from './hooks/useState/Todo';
-import CompositionExample from './components/composition/radiogroup/CompositionExample';
+import RedPanelWithFetch from './components/higher-order-components/RedPanelWithFetch';
+import YellowPanelWithFetch from './components/higher-order-components/YellowPanelWithFetch';
 
 function App() {
   
@@ -25,6 +26,10 @@ function App() {
         <div>
           {/* Understanding useEffect */}
           <UseEffectExample />
+        </div>
+        <div>
+          <RedPanelWithFetch />
+          <YellowPanelWithFetch />
         </div>
       </div>
   );
