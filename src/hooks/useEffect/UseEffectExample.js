@@ -47,7 +47,6 @@ export default function UseEffectExample() {
                 <li>This effectively means that the useEffect body will only be run once when the component is loaded.</li>
             </ul>
 
-            <h1>Use Effect Dependency:</h1>
             <p>Count3: {count3}</p>
             <ul>
                 <li>Count 3 is not incremented by any timeout or interval then how us it incrementing?</li>

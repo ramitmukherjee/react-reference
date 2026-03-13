@@ -1,8 +1,6 @@
 import { useState } from "react";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
-import RadioGroup from "../../components/composition/radiogroup/RadioGroup";
-import RadioOption from "../../components/composition/radiogroup/RadioOption";
 
 const Todo = () => {
     
@@ -51,11 +49,7 @@ const Todo = () => {
     return (
         <div>
             <h2>Todo:</h2>
-            <RadioGroup selected={selectedMode} onChange={handleModeChange}>
-                <RadioOption value="strike" label="Strike completed"/>
-                <RadioOption value="delete" label="Delete completed"/>
-            </RadioGroup>
-            <TodoForm addTodo={handleTodoAdd}/>
+            <TodoForm addTodo={handleTodoAdd} selectedMode={selectedMode} handleModeChange={handleModeChange}/>
             <TodoList todoList={todoList} handleCompleteTask={handleCompleteTask}/>
         </div>
     );
