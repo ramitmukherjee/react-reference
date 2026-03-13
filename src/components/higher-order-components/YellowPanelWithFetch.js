@@ -1,15 +1,18 @@
 import WithFetch from "./WithFetch";
 import { useTheme } from '../theme/ThemeContext';
 
-const YellowPanelTodoFetch = (props) => {
+const YellowPanel = (props) => {
     const { theme } = useTheme();
     return (
-        <pre style={{backgroundColor: theme === 'dark' ? 'saddlebrown' : 'cornsilk'}}>
-            {props.data.length > 0 ? props.data : 'Fetching yellow data...'}
-        </pre>
+        <div>
+            
+            <pre style={{backgroundColor: theme === 'dark' ? 'saddlebrown' : 'cornsilk'}}>
+                YellowPanel: "{props.data.length > 0 ? props.data : 'Fetching yellow data...'}"
+            </pre>
+        </div>
     );
 };
 
-const YellowPanelWithFetch = WithFetch(YellowPanelTodoFetch, "https://jsonplaceholder.typicode.com/todos/1");
+const YellowPanelWithFetch = WithFetch(YellowPanel, "https://jsonplaceholder.typicode.com/todos/1");
 
 export default YellowPanelWithFetch;

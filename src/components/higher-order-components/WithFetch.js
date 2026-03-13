@@ -6,7 +6,7 @@ const WithFetch = (WrappedComponent, url) => {
         fetch(url)
             .then(response => response.json())
             .then(json => {
-                data = setData(json.title);
+                setData(json.title);
             })
             .catch((e) => console.error(e));
         return <WrappedComponent data={data} {...props} />;
